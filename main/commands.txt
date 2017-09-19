@@ -1,0 +1,16 @@
+Retrieve all:
+    test = user.objects.all()
+Get last:
+    test = user.objects.last()
+Create records:
+    user.objects.create(first_name='joe',last_name='pollaro',age=42,email_address='joe@test.com')
+Get first:
+    test=user.objects.first()
+Sorted by first name:
+    test=user.objects.order_by("first_name")
+Get user of id=3 and update last_name:
+    test=user.objects.get(id=3)
+    test.last_name='test2'
+    test.save()
+Delete specific user:
+    user.objects.get(id=4).delete()
